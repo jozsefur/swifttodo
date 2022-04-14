@@ -10,11 +10,13 @@ import Foundation
 struct ToDo: Identifiable, Codable {
     var name: String
     var completed: Bool = false
-    private var _id: UUID = UUID()
-
-    var id: String {
-        return self._id.uuidString
-    }
+    var id: String = UUID().uuidString
+//    private var _id: UUID = UUID()
+//
+//    var id: String {
+//        get { self._id.uuidString }
+//        set { self._id = UUID(uuidString: newValue)! }
+//    }
     
     static var sampleData: [ToDo] {
         [
