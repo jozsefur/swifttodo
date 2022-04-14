@@ -1,14 +1,14 @@
 //
-//  ToDoTests.swift
-//  ToDoTests
+//  TodoTests.swift
+//  TodoTests
 //
 //  Created by Jozsef Basiszta on 2022. 02. 05..
 //
 
 import XCTest
-@testable import ToDo
+@testable import Todo
 
-class ToDoTests: XCTestCase {
+class TodoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

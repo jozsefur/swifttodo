@@ -1,13 +1,13 @@
 //
-//  ToDoFormViewModel.swift
-//  ToDo
+//  TodoFormViewModel.swift
+//  Todo
 //
-//  Created by hero on 2022. 02. 05..
+//  Created by Jozsef Basiszta on 2022. 02. 05..
 //
 
 import Foundation
 
-class ToDoFormViewModel: ObservableObject {
+class TodoFormViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var completed: Bool = false
     var id: String?
@@ -23,9 +23,9 @@ class ToDoFormViewModel: ObservableObject {
     init() {
     }
     
-    init(editToDo: ToDo) {
-        self.name = editToDo.name
-        self.completed = editToDo.completed
-        self.id = editToDo.id
+    init(editTodo: Todo) {
+        self.name = editTodo.name
+        self.completed = editTodo.completed
+        self.id = editTodo.id
     }
 }

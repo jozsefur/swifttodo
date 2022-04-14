@@ -1,6 +1,6 @@
 //
 //  FormType.swift
-//  ToDo
+//  Todo
 //
 //  Created by Jozsef Basiszta on 2022. 02. 06..
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 enum FormType: Identifiable, View {
     case new
-    case update(ToDo)
+    case update(Todo)
     var id: String {
         switch self {
         case .new:
@@ -22,9 +22,9 @@ enum FormType: Identifiable, View {
     var body: some View {
         switch self {
         case .new:
-            return ToDoFormView(formViewModel: ToDoFormViewModel())
-        case .update(let editToDo):
-            return ToDoFormView(formViewModel: ToDoFormViewModel(editToDo: editToDo))
+            return TodoFormView(formViewModel: TodoFormViewModel())
+        case .update(let editTodo):
+            return TodoFormView(formViewModel: TodoFormViewModel(editTodo: editTodo))
         }
     }
 }

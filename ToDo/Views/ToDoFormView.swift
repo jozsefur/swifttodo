@@ -1,26 +1,26 @@
 //
-//  ToDoFormView.swift
-//  ToDo
+//  TodoFormView.swift
+//  Todo
 //
 //  Created by Jozsef Basiszta on 2022. 02. 05..
 //
 
 import SwiftUI
 
-struct ToDoFormView: View {
+struct TodoFormView: View {
     @EnvironmentObject var dataStore: DataStore
-    @ObservedObject var formViewModel: ToDoFormViewModel
+    @ObservedObject var formViewModel: TodoFormViewModel
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
             Form {
                 VStack(alignment: .leading, content: {
-                    TextField("ToDo", text: $formViewModel.name)
+                    TextField("Todo", text: $formViewModel.name)
                     Toggle("Completed", isOn: $formViewModel.completed)
                 })
             }
-            .navigationTitle("ToDo")
+            .navigationTitle("Todo")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: cancelButton,
@@ -37,8 +37,8 @@ struct ToDoFormView: View {
     
     var addButton: some View {
         Button("Add") {
-            let newItem = ToDo(name: formViewModel.name)
-            dataStore.addItem(toDo: newItem)
+            let newItem = Todo(name: formViewModel.name)
+            dataStore.addItem(Todo: newItem)
             presentationMode.wrappedValue.dismiss()
         }
         .disabled(formViewModel.isDisabled)
@@ -46,21 +46,21 @@ struct ToDoFormView: View {
     
     var saveButton: some View {
         Button("Save") {
-            let updated = ToDo(
+            let updated = Todo(
                 name: formViewModel.name,
                 completed: formViewModel.completed,
                 id: formViewModel.id!
             )
-            dataStore.updateItem(toDo: updated)
+            dataStore.updateItem(Todo: updated)
             presentationMode.wrappedValue.dismiss()
         }
         .disabled(formViewModel.isDisabled)
     }
 }
 
-struct ToDoFormView_Previews: PreviewProvider {
+struct TodoFormView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoFormView(formViewModel: ToDoFormViewModel())
+        TodoFormView(formViewModel: TodoFormViewModel())
             .environmentObject(DataStore())
     }
 }
