@@ -1,0 +1,1 @@
+A Dunaújvárosi Egyetem Mérnökinformatika szakán készült szakdolgozat forráskódja.
