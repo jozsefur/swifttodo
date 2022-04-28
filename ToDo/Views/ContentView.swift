@@ -22,23 +22,30 @@ struct ContentView: View {
                             .strikethrough(Todo.completed)
                             .foregroundColor(Todo.completed ? .green : Color(.label))
                     }
+                    .accessibility(identifier: Todo.name)
                 }
                 .onDelete(perform: { indexSet in
                     dataStore.deleteItem(at: indexSet)
                 })
             }
+            .accessibility(identifier: "todoList")
             .listStyle(InsetGroupedListStyle())
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("SUT Todo App")
                         .font(.largeTitle)
                         .foregroundColor(Color(.label))
+                        .accessibility(identifier: "todoAppTitle")
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        self.formType = .new
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
+                    HStack {
+                        Button {
+                            self.formType = .new
+                        } label: {
+                            Image(systemName: "plus.circle.fill")
+                        }
+                        .accessibility(identifier: "todoPlusButton")
+                        Text("")
                     }
                 }
             }

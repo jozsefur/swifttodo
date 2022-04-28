@@ -1,18 +1,17 @@
 //
-//  Todo.swift
-//  Todo
+//  DefaultTodos.swift
+//  TodoUITests
 //
-//  Created by Jozsef Basiszta on 2022. 02. 05..
+//  Created by hero on 2022. 04. 25..
 //
 
 import Foundation
 
-struct Todo: Identifiable, Codable {
+struct Todo {
     var name: String
     var completed: Bool = false
-    var id: String = UUID().uuidString
     
-    static var sampleData: [Todo] {
+    static var defaultTodos: [Todo] {
         [
             Todo(name: "minta app összerakása", completed: true),
             Todo(name: "szakdolgozat befejezése"),

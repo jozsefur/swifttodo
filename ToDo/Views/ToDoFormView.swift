@@ -14,25 +14,30 @@ struct TodoFormView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                VStack(alignment: .leading, content: {
-                    TextField("Todo", text: $formViewModel.name)
-                    Toggle("Completed", isOn: $formViewModel.completed)
-                })
-            }
-            .navigationTitle("Todo")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(
-                leading: cancelButton,
-                trailing: (formViewModel.isBeingUpdated ? AnyView(saveButton) : AnyView(addButton))
-            )
+                Form {
+                    VStack(alignment: .leading, content: {
+                        TextField("Todo", text: $formViewModel.name)
+                            .accessibility(identifier: "todoNameInput")
+                        Toggle("Completed", isOn: $formViewModel.completed)
+                            .accessibility(identifier: "todoCompletedToggle")
+                    })
+                }
+                .navigationTitle("Todo")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    leading: cancelButton,
+                    trailing: (formViewModel.isBeingUpdated ? AnyView(saveButton) : AnyView(addButton))
+                )
         }
+//        .accessibilityElement()
+//        .accessibility(identifier: "todoFormView")
     }
     
     var cancelButton: some View {
         Button("Cancel") {
             presentationMode.wrappedValue.dismiss()
         }
+        .accessibility(identifier: "cancelButton")
     }
     
     var addButton: some View {
@@ -41,6 +46,7 @@ struct TodoFormView: View {
             dataStore.addItem(Todo: newItem)
             presentationMode.wrappedValue.dismiss()
         }
+        .accessibility(identifier: "addButton")
         .disabled(formViewModel.isDisabled)
     }
     
