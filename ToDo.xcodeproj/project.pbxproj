@@ -24,6 +24,10 @@
 		C45FE0AE280B49B3008AD859 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FE0AD280B49B2008AD859 /* Displayable.swift */; };
 		C45FE0B6280B4B55008AD859 /* AddNewItemDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FE0B5280B4B55008AD859 /* AddNewItemDialog.swift */; };
 		C4681FE227B0623F00CEFAF5 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4681FE127B0623F00CEFAF5 /* FormType.swift */; };
+		C485D17E281ACA030077CF65 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D17D281ACA030077CF65 /* TodoItem.swift */; };
+		C485D183281ACB230077CF65 /* TodoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D182281ACB230077CF65 /* TodoItems.swift */; };
+		C485D188281C0C8F0077CF65 /* CompletedToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D187281C0C8F0077CF65 /* CompletedToggle.swift */; };
+		C485D190281C0DB40077CF65 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D18F281C0DB40077CF65 /* Toggle.swift */; };
 		C48E90E4280C37C1000D233D /* TodoTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E90E3280C37C1000D233D /* TodoTestCase.swift */; };
 		C4C0761227AF0B9800CAF024 /* TodoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0761127AF0B9800CAF024 /* TodoFormViewModel.swift */; };
 		C4C0762027AF0CEE00CAF024 /* TodoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0761F27AF0CEE00CAF024 /* TodoFormView.swift */; };
@@ -83,6 +87,10 @@
 		C45FE0AD280B49B2008AD859 /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		C45FE0B5280B4B55008AD859 /* AddNewItemDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemDialog.swift; sourceTree = "<group>"; };
 		C4681FE127B0623F00CEFAF5 /* FormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormType.swift; sourceTree = "<group>"; };
+		C485D17D281ACA030077CF65 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		C485D182281ACB230077CF65 /* TodoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItems.swift; sourceTree = "<group>"; };
+		C485D187281C0C8F0077CF65 /* CompletedToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToggle.swift; sourceTree = "<group>"; };
+		C485D18F281C0DB40077CF65 /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
 		C48E90E3280C37C1000D233D /* TodoTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTestCase.swift; sourceTree = "<group>"; };
 		C4C0761127AF0B9800CAF024 /* TodoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormViewModel.swift; sourceTree = "<group>"; };
 		C4C0761F27AF0CEE00CAF024 /* TodoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormView.swift; sourceTree = "<group>"; };
@@ -168,6 +176,9 @@
 				C4FABE73280C467C000A2AB3 /* AddButton.swift */,
 				C43C7CCE2816CDED0056460D /* AppTitle.swift */,
 				C43C7CEC2816D8730056460D /* CancelButton.swift */,
+				C485D17D281ACA030077CF65 /* TodoItem.swift */,
+				C485D182281ACB230077CF65 /* TodoItems.swift */,
+				C485D187281C0C8F0077CF65 /* CompletedToggle.swift */,
 			);
 			path = UIDescriptors;
 			sourceTree = "<group>";
@@ -321,6 +332,7 @@
 				C4FABE93280C5574000A2AB3 /* TextInput.swift */,
 				C43C7CD32816CE280056460D /* Button.swift */,
 				C43C7CD82816CE310056460D /* Label.swift */,
+				C485D18F281C0DB40077CF65 /* Toggle.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -485,7 +497,9 @@
 				C4FABE74280C467C000A2AB3 /* AddButton.swift in Sources */,
 				C4C9CC112812735E003F662E /* TodoRecordedTest.swift in Sources */,
 				C45FE091280B4046008AD859 /* Workflows.swift in Sources */,
+				C485D190281C0DB40077CF65 /* Toggle.swift in Sources */,
 				C4353C75280B4E2800077815 /* MainScreen.swift in Sources */,
+				C485D17E281ACA030077CF65 /* TodoItem.swift in Sources */,
 				C4FABEA9280C6300000A2AB3 /* AddNewItemDialogWorkflows.swift in Sources */,
 				C4FABE5E280C3D1F000A2AB3 /* NameInput.swift in Sources */,
 				C4FABE9F280C6193000A2AB3 /* MainScreenWorkflows.swift in Sources */,
@@ -493,6 +507,7 @@
 				C4FABE6C280C3DC2000A2AB3 /* Typeable.swift in Sources */,
 				C48E90E4280C37C1000D233D /* TodoTestCase.swift in Sources */,
 				C43C7CED2816D8730056460D /* CancelButton.swift in Sources */,
+				C485D183281ACB230077CF65 /* TodoItems.swift in Sources */,
 				C43C7CD92816CE310056460D /* Label.swift in Sources */,
 				C4FABE7A280C4B84000A2AB3 /* Assert.swift in Sources */,
 				C43C7CCF2816CDED0056460D /* AppTitle.swift in Sources */,
@@ -505,6 +520,7 @@
 				C4E8E16827AEC9EB00E800F9 /* TodoMainScreenTests.swift in Sources */,
 				C4FABE59280C3B8B000A2AB3 /* TodoAddDialogTests.swift in Sources */,
 				C4353C7A280B4F1300077815 /* AddNewItemButton.swift in Sources */,
+				C485D188281C0C8F0077CF65 /* CompletedToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

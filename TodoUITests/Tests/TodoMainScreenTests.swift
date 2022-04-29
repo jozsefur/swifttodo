@@ -15,8 +15,7 @@ class TodoMainScreenTests: TodoTestCase {
                 Workflows.app.launch()
             },
             assert: {
-                XCTAssertEqual(UIDescriptors.mainScreen.appTitle.label,
-                               "SUT Todo App")
+                XCTAssertEqual(UIDescriptors.mainScreen.appTitle.label, "SUT Todo App")
             }
         )
     }

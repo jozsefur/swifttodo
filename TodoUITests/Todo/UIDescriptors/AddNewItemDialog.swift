@@ -2,7 +2,7 @@
 //  Dialog.swift
 //  TodoUITests
 //
-//  Created by hero on 2022. 04. 16..
+//  Created by Jozsef Basiszta on 2022. 04. 16..
 //
 
 import Foundation
@@ -15,6 +15,8 @@ struct AddNewItemDialog {
     var cancelButton: CancelButton { CancelButton() }
     
     var nameInput: NameInput { NameInput() }
+    
+    var completedToggle: CompletedToggle { CompletedToggle() }
 }
 
 extension AddNewItemDialog: UIIdentifiable {

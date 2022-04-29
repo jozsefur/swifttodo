@@ -21,8 +21,9 @@ struct ContentView: View {
                         Text(Todo.name)
                             .strikethrough(Todo.completed)
                             .foregroundColor(Todo.completed ? .green : Color(.label))
+                            .accessibility(value: Text("\(Todo.completed ? "Completed" : "Uncompleted") todo item: \(Todo.name)"))
                     }
-                    .accessibility(identifier: Todo.name)
+                    .accessibility(identifier: "todoItem-\(Todo.name)")
                 }
                 .onDelete(perform: { indexSet in
                     dataStore.deleteItem(at: indexSet)

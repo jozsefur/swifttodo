@@ -2,7 +2,7 @@
 //  DefaultTodos.swift
 //  TodoUITests
 //
-//  Created by hero on 2022. 04. 25..
+//  Created by Jozsef Basiszta on 2022. 04. 25..
 //
 
 import Foundation
@@ -17,5 +17,13 @@ struct Todo {
             Todo(name: "szakdolgozat befejezése"),
             Todo(name: "záróvizsga")
         ]
+    }
+    
+    static var firstCompletedFromDefaultTodos: Todo {
+        defaultTodos.first(where: { $0.completed })!
+    }
+    
+    static var firstUncompletedFromDefaultTodos: Todo {
+        defaultTodos.first(where: { !$0.completed })!
     }
 }
