@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct AddNewItemDialog {
-    init() {}
-    
+struct AddNewItemDialog {    
     var addButton: AddButton { AddButton() }
     
     var cancelButton: CancelButton { CancelButton() }

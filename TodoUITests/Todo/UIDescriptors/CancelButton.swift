@@ -9,5 +9,4 @@ import Foundation
 
 struct CancelButton: Button {
     var id: String { "cancelButton" }
-    init() {}
 }

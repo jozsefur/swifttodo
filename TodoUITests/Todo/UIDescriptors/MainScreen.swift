@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct MainScreen {
-    init() {}
-    
+struct MainScreen {  
     var appTitle: AppTitle {
         return AppTitle()
     }

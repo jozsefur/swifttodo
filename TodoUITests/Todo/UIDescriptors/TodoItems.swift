@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import XCTest
 
 struct TodoItems {
     var firstCompleted: TodoItem? {
@@ -30,7 +29,7 @@ struct TodoItems {
             xcuiElement!
                 .descendants(matching: .button)
                 .allElementsBoundByAccessibilityElement
-                .map { (button: XCUIElement) -> TodoItem in
+                .map { (button) -> TodoItem in
                     TodoItem(
                         id: button.identifier,
                         name: button.label,
@@ -39,7 +38,6 @@ struct TodoItems {
                 }
         }
     }
-
 }
 
 extension TodoItems: UIIdentifiable {

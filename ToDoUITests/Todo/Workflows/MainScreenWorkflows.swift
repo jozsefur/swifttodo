@@ -12,6 +12,7 @@ struct MainScreenWorkflows {
     static func openAddDialog() {
         XCTAssertFalse(UIDescriptors.addNewItemDialog.exists)
         UIDescriptors.mainScreen.addNewItemButton.tap()
+        XCTAssert(UIDescriptors.addNewItemDialog.exists)
     }
     
     static func editFirstCompletedItem() {

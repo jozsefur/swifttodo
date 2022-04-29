@@ -8,7 +8,6 @@
 import Foundation
 
 struct AddNewItemButton {
-    init() {}
 }
 
 extension AddNewItemButton: UIIdentifiable {

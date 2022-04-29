@@ -9,5 +9,6 @@ import Foundation
 
 struct Assert {
     static var thatMainScreen: ThatMainScreen.Type { ThatMainScreen.self }
+    
     static var thatAddNewDialog: ThatAddNewDialog.Type { ThatAddNewDialog.self }
 }

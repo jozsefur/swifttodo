@@ -9,6 +9,5 @@ import Foundation
 
 struct AppTitle: UIIdentifiable, Displayable, Readable {
     var id: String { "todoAppTitle" }
-    init() {}
 }
 
