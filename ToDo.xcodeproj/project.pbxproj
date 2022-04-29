@@ -148,12 +148,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C43C7CF12816DAD40056460D /* Constants */ = {
+		C43C7CF12816DAD40056460D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C43C7CF22816DAE50056460D /* DefaultTodos.swift */,
 			);
-			path = Constants;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C45FE08F280B4033008AD859 /* Workflows */ = {
@@ -230,7 +230,7 @@
 		C48E90D8280C368F000D233D /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				C43C7CF12816DAD40056460D /* Constants */,
+				C43C7CF12816DAD40056460D /* Models */,
 				C4FABE78280C4B78000A2AB3 /* Assert */,
 				C45FE08F280B4033008AD859 /* Workflows */,
 				C45FE09B280B40AF008AD859 /* UIDescriptors */,
